@@ -1,0 +1,46 @@
+create table city(cityid varchar(5),citydesc varchar(100),primary key(cityid));
+create table Employees(empid varchar(5),fname varchar(100),primary key(empid));
+create table products(prodid varchar(5),prodname varchar(100),primary key(prodid));
+create table country(countryid varchar(5),countdesc varchar(100),primary key(countryid));
+create table fact(countryid varchar(5),cityid varchar(5),empid varchar(5),prodid varchar(5), totqty int, totsales int, foreign key(countryid) references country,
+foreign key(cityid) references city,foreign key(empid) references employees,foreign key(prodid) references products);
+
+select * from products;
+select * from city;
+select * from employees;
+select * from country;
+
+begin
+insert into city values(101,'Madurai');
+insert into city values(102,'Salem');
+insert into city values(103,'Trichy');
+insert into city values(104,'Chennai');
+insert into city values(105,'Tuticorin');
+end;
+
+
+begin
+insert into employees values(201,'Mahadevan');
+insert into employees values(202,'Hariharan');
+insert into employees values(203,'Balaji');
+insert into employees values(204,'Suresh');
+insert into employees values(205,'Vasanth');
+end;
+
+
+begin
+insert into country values(301,'India');
+insert into country values(302,'US');
+insert into country values(303,'Afghanisthan');
+insert into country values(304,'China');
+insert into country values(305,'Pakisthan');
+end;
+
+
+begin
+insert into products values(401,'Apple');
+insert into products values(402,'Straberry');
+insert into products values(403,'Choclates');
+insert into products values(404,'Pista');
+insert into products values(405,'Potato');
+end;

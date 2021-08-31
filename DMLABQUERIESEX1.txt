@@ -1,0 +1,80 @@
+BEGIN
+insert into employe values(107,'meha','indiranagar','mumbai');
+insert into employe values(108,'xaver','gandinagar','andrapradesh');
+insert into employe values(109,'ketti','silicon','newyork');
+insert into employe values(110,'lello','gopalnagar','london');
+insert into employe values(111,'seira','kannannagar','kerala');
+END;
+
+desc company;
+desc manager;
+select * from employe;
+desc workers;
+
+BEGIN
+insert into company values('GOOGLE','chennai');
+insert into company values('MICROSOFT','chennai');
+insert into company values('TEXLA','chennai');
+insert into company values('FACEBOOK','chennai');
+insert into company values('ZOHO','chennai');
+insert into company values('AMAZON','chennai');
+END;
+
+BEGIN
+insert into workers values(101,'ZOHO',50000);
+insert into workers values(102,'FACEBOOK',85000);
+insert into workers values(103,'GOOGLE',90000);
+insert into workers values(104,'TEXLA',80000);
+insert into workers values(105,'AMAZON',60000);
+insert into workers values(106,'MICROSOFT',70000);
+END;
+
+select * from employe;
+select * from manager;
+select * from workers;
+select * from company;
+
+SELECT MAX (column_name) FROM table_name WHERE column_name
+
+
+select name,street,city from employe,workers where employe.ID = workers.ID and compname='FACEBOOK' and salary>50000;
+
+select cast(avg(salary)as decimal(10,2)) from workers;
+
+select MAX(salary) from workers;
+
+select managername,salary from manager,workers where manager.ID = workers.ID and workers.id =(select id from employe where name='sunil');
+
+select compname from workers where salary=(select MIN(salary) from workers);
+
+select name from employe where id = (select id from workers where salary=(select MIN(salary) from workers));
+
+select city, count(*) from employe group by city having count(*)>2;
+
+select id,name from employe where employe.city in(select company.city from company);
+
+select id,name from employe natural join (
+select workers.id from workers order by salary desc);
+
+SELECT e.name,e.city
+FROM  employe e
+JOIN manager m ON m.id = e.id
+WHERE EXISTS (
+    SELECT 1
+    FROM employe 
+    WHERE id = m.id
+        AND city = e.city
+);
+
+
+
+
+
+
+
+
+
+
+
+
+

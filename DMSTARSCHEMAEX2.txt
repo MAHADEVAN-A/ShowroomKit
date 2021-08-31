@@ -1,0 +1,38 @@
+create table time(time_key varchar(5),day varchar(20),day_of_the_week varchar(20),month varchar(20),quarter NUMBER,year NUMBER(4),primary key(time_key));
+
+create table branch(branch_key varchar(5),branch_name varchar(30),branch_type varchar(30),primary key(branch_key));
+
+create table item(item_key varchar(5),item_name varchar(50),brand varchar(50),type varchar(30),supplier_type varchar(30),primary key(item_key));
+
+create table location(location_key varchar(5),street varchar(50),city varchar(50),province_or_state varchar(50),country varchar(20),primary key(location_key));
+
+
+create table sales(time_key varchar(5),item_key varchar(5),branch_key varchar(5),location_key varchar(5),dollars_sold NUMBER,units_sold NUMBER,foreign key(time_key) references time,foreign key(item_key) references item,foreign key(branch_key) references branch,foreign key(location_key) references location);
+
+begin
+insert into time values(102,2,'tuesday','april',1,2021);
+insert into time values(103,3,'thursday','april',1,2021);
+insert into time values(104,4,'friday','april',1,2021);
+insert into time values(105,5,'saturday','april',1,2021);
+insert into time values(106,6,'sunday','april',1,2021);
+end;
+
+select * from time;
+
+
+begin
+insert into branch values(201,'madurai','foodproduct');
+insert into branch values(202,'salem','books');
+insert into branch values(203,'ramanad','vehicle');
+insert into branch values(204,'thanjavur','mobiles');
+insert into branch values(205,'tirunelveli','textile');
+end;
+
+
+begin
+insert into location values(301,'nethaji road','madurai','tamilnadu','india');
+insert into location values(302,'simakkal','madurai','tamilnadu','india');
+insert into location values(303,'kk nagar','madurai','tamilnadu','india');
+insert into location values(304,'anna nagar','madurai','tamilnadu','india');
+insert into location values(305,'koripalayam','madurai','tamilnadu','india');
+end;
