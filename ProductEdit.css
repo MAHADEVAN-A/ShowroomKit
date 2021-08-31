@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Paytone+One&family=Poppins:wght@400;600&display=swap');
+/*
+    font-family: 'Pacifico', cursive;
+
+    font-family: 'Paytone One', sans-serif;
+
+    font-family: 'Poppins', sans-serif;*/
+
+*{
+	padding: 0;
+	/*border:1px solid red;*/
+	margin: 0;
+}
+
+body{  
+  background-image: url("Doubs.png");
+    font-family: 'Poppins', sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;           /* clip */
+}
+
+
+.container{
+	background-color: white;
+	border-radius:8px;
+	padding:1rem 1.5rem;
+	/*height: 90vh;*/
+	width: 85%;
+	margin:2rem auto;
+}
+
+.inputbox input{
+	/*width:80%;*/
+	border:2px solid black;
+	margin:2rem 0;
+	padding:0.3rem 0.5rem;
+	font-size: 1.1rem;
+}
+
+.title{
+
+}
+
+.imgedit
+{
+	display: flex;
+	/*justify-content: space-between;*/
+}
+
+button{
+	background: transparent;
+	box-shadow: 0px 0px 0px transparent;
+	background-color: #2E39A9;
+	border-radius:8px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	color: white;
+	text-shadow: 0px 0px 0px transparent;
+	font-size: 1.2rem;
+	text-decoration: none;
+	padding:0.3rem 1.7rem;
+}
+.imgedit button{
+	background-color: #E2164B;
+	margin-left:2rem;
+}
+
+
+.image img
+{
+	margin:2rem 0;
+}
+
+.imgbtn{
+
+}
+
+.uploadbtn{
+
+}
+

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Paytone+One&family=Poppins:wght@400;600&display=swap');
+/*
+    font-family: 'Pacifico', cursive;
+
+    font-family: 'Paytone One', sans-serif;
+
+    font-family: 'Poppins', sans-serif;*/
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{  
+  background-image: url("Rangitikei.png");
+    font-family: 'Poppins', sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;           /* clip */
+}
+
+.container{
+	background-color: white;
+	border-radius:8px;
+	padding:1rem 1.5rem;
+	/*height: 90vh;*/
+	width: 85%;
+	margin:2rem auto;
+}
+.titlename{
+    font-family: 'Pacifico', cursive;
+    font-size: 1.2rem;
+	color: #FE5E33;
+}
+
+.producttitle{
+	margin:4rem 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.producttitle input{
+	/*width:80%;*/
+	border:2px solid black;
+	padding:0.3rem 0.5rem;
+	font-size: 1.1rem;
+}
+
+.producttitle h2{
+	display: inline-block;
+}
+
+
+.productlist{
+	padding:0.5rem 1rem;
+	display: flex;
+	margin:1.2rem 0;
+	font-size: 0.6rem;
+	align-items: center; 
+    transition-property: all;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+	border-radius:10px;
+	justify-content: space-between;
+}
+
+
+.productlist:hover{
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.productlist .icon i{
+	font-size: 1.5rem;
+	/*line-height: -10px;*/
+}

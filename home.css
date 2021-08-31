@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Paytone+One&family=Poppins:wght@400;600&display=swap');
+/*
+    font-family: 'Pacifico', cursive;
+
+    font-family: 'Paytone One', sans-serif;
+
+    font-family: 'Poppins', sans-serif;*/
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.navbar{
+	width:90%;
+	max-width: 1000px;
+	font-size: 1.3rem;
+    font-family: 'Pacifico', cursive;
+	margin: 0 auto;
+	padding:1rem 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.navlink{
+	text-decoration: none;
+	color: inherit;
+}
+
+.hero{
+	display: flex;
+	max-width: 1000px;
+	/*border: 1px solid black;*/
+	width:90%;
+	margin:3rem auto;
+	justify-content: space-evenly;
+}
+
+.search{
+	max-width: 1000px;
+	/*height: 100vh;*/
+	/*border: 1px solid black;*/
+	padding:5rem 0;
+    font-family: 'Poppins', sans-serif;*/
+	width:90%;
+	margin:3rem auto;
+}
+
+.herotext{
+	/*border: 1px solid black;*/
+	font-size: 2rem;
+	/*font-style: bolder;*/
+    font-family: 'Paytone One', sans-serif;
+	display: grid;
+	place-content: center;
+}
+
+.searchtitle h2{
+	padding: 2rem 0;
+	font-size: 2rem;
+	display: inline-block;
+}
+
+.searchbox input{
+	width:80%;
+	border:2px solid black;
+	padding:0.5rem 1rem;
+	font-size: 1.4rem;
+}
+
+.searchlist{
+	width:80%;
+	padding:0.5rem 1rem;
+	margin-top:2rem;
+	display: flex;
+	font-size:0.9rem;
+	background-color: rgb(0,22,85);
+	color: white;
+	border-radius: 9px;
+	justify-content: space-between;
+}
+
+.stars{
+	/*border:1px solid white;*/
+	display: flex;
+	justify-content: flex-end;
+	/*width:55%;*/
+}
+.starsimg{
+	/*border:1px solid white;*/
+	width:65%;
+}
