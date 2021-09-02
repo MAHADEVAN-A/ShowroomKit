@@ -36,3 +36,35 @@ insert into location values(303,'kk nagar','madurai','tamilnadu','india');
 insert into location values(304,'anna nagar','madurai','tamilnadu','india');
 insert into location values(305,'koripalayam','madurai','tamilnadu','india');
 end;
+
+
+begin
+insert into location values(306,'holand street','southwales','victoria','australia');
+insert into location values(307,'kelvi street','petersburg','newyork','america');
+insert into location values(308,'merlin street','kingslam','Edinburgh','england');
+insert into location values(309,'saint street','kilden','paris','france');
+insert into location values(310,'bergin street','shangzi','beijing','china');
+end;
+
+begin
+insert into item values(401,'flaton 245','panasonic','TV','b2c');
+insert into item values(402,'hydro 109','samsung','TV','b2g');
+insert into item values(403,'likely 232','Redmi','TV','b2b');
+insert into item values(404,'plano 234','TCL','TV','b2c');
+insert into item values(405,'verdana 125','Haier','TV','b2g');
+end;
+
+select * from time;
+select * from branch;
+select * from location;
+select * from item;
+
+
+create table location_table(location_key varchar(5),street varchar(50),city_key varchar(5),primary key(location_key),foreign key(city_key) references city_table);
+
+create table city_table(city_key varchar(5),city varchar(50),province_or_state varchar(50),country varchar(20),primary key(city_key));
+
+create table supplier_table(supplier_key varchar(5),supplier_type varchar(20),primary key(supplier_key));
+
+create table item_table(item_key varchar(5),item_name varchar(50),brand varchar(50),type varchar(30),supplier_key varchar(30),primary key(item_key),foreign key(supplier_key)references supplier_table);
+
