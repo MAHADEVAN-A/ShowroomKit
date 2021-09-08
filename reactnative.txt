@@ -1,0 +1,59 @@
+import * as React from 'react';
+import { Text, View, StyleSheet,Image,TextInput,TouchableHighlight } from 'react-native';
+
+//  function _onPressButton() {
+//     alert('You tapped the button!')
+//   }
+
+export default function App() {
+   
+  return (
+    <View style={styles.container}>
+      <Text style={styles.heading}>ShowRoomKit</Text>
+      <View style={{flex:1,justifyContent:"center",alignItems:"center"}}>
+      <Image style={styles.tinyImg} source={require("./assets/undraw_Online_shopping_re_k1sv.png")} />
+      </View>
+      <View style={{width:250,marginLeft:'auto',marginRight:'auto'}}>
+      <TextInput placeholder="Enter your emailid" style={styles.input} />
+      </View>
+      <View style={{width:250,marginLeft:'auto',marginRight:'auto'}}>
+      <TextInput placeholder="Enter your name" style={styles.input} />
+      </View>
+      <View style={{width:224,marginLeft:'auto',marginRight:'auto'}}>
+      <TouchableHighlight style={styles.button}><Text style={{color: "white",}}>Login</Text></TouchableHighlight>
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container:{
+    marginHorizontal: 10,
+    marginVertical: 10,
+    // flex:1,
+    // alignItems:"center",
+  },
+  heading: {
+    fontFamily: "cursive",
+    fontSize: 20,
+    textAlign: "center",
+  },
+  tinyImg: {
+    marginVertical:30,
+    width: 200,
+    height: 200,
+  },
+  input: {
+    height: 29,
+    margin: 12,
+    borderRadius:10,
+    borderWidth: 1,
+    padding: 10,
+  },
+  button: {
+    alignItems: "center",
+    backgroundColor: "#6C63FF",
+    borderRadius:10,
+    padding: 5,
+  },
+});
