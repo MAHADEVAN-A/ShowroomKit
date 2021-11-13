@@ -1,0 +1,222 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     sick-weka.filters.supervised.attribute.Discretize-Rfirst-last-precision6-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-Rfirst-last
+Instances:    3772
+Attributes:   30
+              age
+              sex
+              on_thyroxine
+              query_on_thyroxine
+              on_antithyroid_medication
+              sick
+              pregnant
+              thyroid_surgery
+              I131_treatment
+              query_hypothyroid
+              query_hyperthyroid
+              lithium
+              goitre
+              tumor
+              hypopituitary
+              psych
+              TSH_measured
+              TSH
+              T3_measured
+              T3
+              TT4_measured
+              TT4
+              T4U_measured
+              T4U
+              FTI_measured
+              FTI
+              TBG_measured
+              TBG
+              referral_source
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                               Class
+Attribute                   negative     sick
+                              (0.94)   (0.06)
+==============================================
+age
+  '(-inf-43.5]'                1302.0     25.0
+  '(43.5-69.5]'                1560.0     99.0
+  '(69.5-inf)'                  681.0    110.0
+  [total]                      3543.0    234.0
+
+sex
+  F                            2345.0    137.0
+  M                            1054.0     90.0
+  [total]                      3399.0    227.0
+
+on_thyroxine
+  f                            3090.0    220.0
+  t                             453.0     13.0
+  [total]                      3543.0    233.0
+
+query_on_thyroxine
+  f                            3496.0    228.0
+  t                              47.0      5.0
+  [total]                      3543.0    233.0
+
+on_antithyroid_medication
+  f                            3499.0    232.0
+  t                              44.0      1.0
+  [total]                      3543.0    233.0
+
+sick
+  f                            3420.0    207.0
+  t                             123.0     26.0
+  [total]                      3543.0    233.0
+
+pregnant
+  f                            3489.0    232.0
+  t                              54.0      1.0
+  [total]                      3543.0    233.0
+
+thyroid_surgery
+  f                            3489.0    232.0
+  t                              54.0      1.0
+  [total]                      3543.0    233.0
+
+I131_treatment
+  f                            3484.0    231.0
+  t                              59.0      2.0
+  [total]                      3543.0    233.0
+
+query_hypothyroid
+  f                            3336.0    204.0
+  t                             207.0     29.0
+  [total]                      3543.0    233.0
+
+query_hyperthyroid
+  f                            3313.0    224.0
+  t                             230.0      9.0
+  [total]                      3543.0    233.0
+
+lithium
+  f                            3525.0    231.0
+  t                              18.0      2.0
+  [total]                      3543.0    233.0
+
+goitre
+  f                            3510.0    230.0
+  t                              33.0      3.0
+  [total]                      3543.0    233.0
+
+tumor
+  f                            3448.0    230.0
+  t                              95.0      3.0
+  [total]                      3543.0    233.0
+
+hypopituitary
+  f                            3542.0    231.0
+  t                               1.0      2.0
+  [total]                      3543.0    233.0
+
+psych
+  f                            3365.0    225.0
+  t                             178.0      8.0
+  [total]                      3543.0    233.0
+
+TSH_measured
+  t                            3175.0    230.0
+  f                             368.0      3.0
+  [total]                      3543.0    233.0
+
+TSH
+  'All'                        3175.0    230.0
+  [total]                      3175.0    230.0
+
+T3_measured
+  t                            2776.0    229.0
+  f                             767.0      4.0
+  [total]                      3543.0    233.0
+
+T3
+  '(-inf-1.15]'                 106.0    207.0
+  '(1.15-inf)'                 2671.0     23.0
+  [total]                      2777.0    230.0
+
+TT4_measured
+  t                            3311.0    232.0
+  f                             232.0      1.0
+  [total]                      3543.0    233.0
+
+TT4
+  '(-inf-87.5]'                 770.0    117.0
+  '(87.5-inf)'                 2542.0    116.0
+  [total]                      3312.0    233.0
+
+T4U_measured
+  t                            3163.0    224.0
+  f                             380.0      9.0
+  [total]                      3543.0    233.0
+
+T4U
+  '(-inf-0.775]'                213.0     73.0
+  '(0.775-0.885]'               556.0     80.0
+  '(0.885-1.145]'              1879.0     73.0
+  '(1.145-inf)'                 518.0      1.0
+  [total]                      3166.0    227.0
+
+FTI_measured
+  t                            3165.0    224.0
+  f                             378.0      9.0
+  [total]                      3543.0    233.0
+
+FTI
+  'All'                        3165.0    224.0
+  [total]                      3165.0    224.0
+
+TBG_measured
+  f                            3542.0    232.0
+  [total]                      3542.0    232.0
+
+TBG
+  'All'                           1.0      1.0
+  [total]                         1.0      1.0
+
+referral_source
+  SVHC                          378.0     10.0
+  other                        2169.0     34.0
+  SVI                           849.0    187.0
+  STMW                          113.0      1.0
+  SVHD                           37.0      4.0
+  [total]                      3546.0    236.0
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3670               97.2959 %
+Incorrectly Classified Instances       102                2.7041 %
+Kappa statistic                          0.7748
+Mean absolute error                      0.0439
+Root mean squared error                  0.1574
+Relative absolute error                 38.069  %
+Root relative squared error             65.6429 %
+Total Number of Instances             3772     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.982    0.173    0.989      0.982    0.986      0.776    0.960     0.997     negative
+                 0.827    0.018    0.755      0.827    0.789      0.776    0.960     0.733     sick
+Weighted Avg.    0.973    0.164    0.974      0.973    0.974      0.776    0.960     0.980     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 3479   62 |    a = negative
+   40  191 |    b = sick
+

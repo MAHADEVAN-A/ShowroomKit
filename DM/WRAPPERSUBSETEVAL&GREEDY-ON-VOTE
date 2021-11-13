@@ -1,0 +1,43 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.WrapperSubsetEval -B weka.classifiers.rules.ZeroR -F 5 -T 0.01 -R 1 -E DEFAULT --
+Search:       weka.attributeSelection.GreedyStepwise -T -1.7976931348623157E308 -N -1 -num-slots 1
+Relation:     vote
+Instances:    435
+Attributes:   17
+              handicapped-infants
+              water-project-cost-sharing
+              adoption-of-the-budget-resolution
+              physician-fee-freeze
+              el-salvador-aid
+              religious-groups-in-schools
+              anti-satellite-test-ban
+              aid-to-nicaraguan-contras
+              mx-missile
+              immigration
+              synfuels-corporation-cutback
+              education-spending
+              superfund-right-to-sue
+              crime
+              duty-free-exports
+              export-administration-act-south-africa
+              Class
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Greedy Stepwise (forwards).
+	Start set: no attributes
+	Merit of best subset found:    0.614
+
+Attribute Subset Evaluator (supervised, Class (nominal): 17 Class):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.rules.ZeroR
+	Scheme options: 
+	Subset evaluation: classification accuracy
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 

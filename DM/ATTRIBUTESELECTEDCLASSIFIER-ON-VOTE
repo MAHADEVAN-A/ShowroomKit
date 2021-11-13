@@ -1,0 +1,107 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AttributeSelectedClassifier -E "weka.attributeSelection.CfsSubsetEval -P 1 -E 1" -S "weka.attributeSelection.BestFirst -D 1 -N 5" -W weka.classifiers.trees.J48 -- -C 0.25 -M 2
+Relation:     vote
+Instances:    435
+Attributes:   17
+              handicapped-infants
+              water-project-cost-sharing
+              adoption-of-the-budget-resolution
+              physician-fee-freeze
+              el-salvador-aid
+              religious-groups-in-schools
+              anti-satellite-test-ban
+              aid-to-nicaraguan-contras
+              mx-missile
+              immigration
+              synfuels-corporation-cutback
+              education-spending
+              superfund-right-to-sue
+              crime
+              duty-free-exports
+              export-administration-act-south-africa
+              Class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+AttributeSelectedClassifier:
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 85
+	Merit of best subset found:    0.729
+
+Attribute Subset Evaluator (supervised, Class (nominal): 17 Class):
+	CFS Subset Evaluator
+	Including locally predictive attributes
+
+Selected attributes: 3,4,10,11 : 4
+                     adoption-of-the-budget-resolution
+                     physician-fee-freeze
+                     immigration
+                     synfuels-corporation-cutback
+
+
+Header of reduced data:
+@relation 'vote-weka.filters.unsupervised.attribute.Remove-V-R3-4,10-11,17'
+
+@attribute adoption-of-the-budget-resolution {n,y}
+@attribute physician-fee-freeze {n,y}
+@attribute immigration {n,y}
+@attribute synfuels-corporation-cutback {n,y}
+@attribute Class {democrat,republican}
+
+@data
+
+
+Classifier Model
+J48 pruned tree
+------------------
+
+physician-fee-freeze = n: democrat (253.41/3.75)
+physician-fee-freeze = y
+|   synfuels-corporation-cutback = n: republican (145.71/4.0)
+|   synfuels-corporation-cutback = y
+|   |   adoption-of-the-budget-resolution = n: republican (25.42/6.12)
+|   |   adoption-of-the-budget-resolution = y: democrat (10.46/3.25)
+
+Number of Leaves  : 	4
+
+Size of the tree : 	7
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         416               95.6322 %
+Incorrectly Classified Instances        19                4.3678 %
+Kappa statistic                          0.908 
+Mean absolute error                      0.0695
+Root mean squared error                  0.1854
+Relative absolute error                 14.6528 %
+Root relative squared error             38.0871 %
+Total Number of Instances              435     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.963    0.054    0.966      0.963    0.964      0.908    0.976     0.975     democrat
+                 0.946    0.037    0.941      0.946    0.944      0.908    0.976     0.949     republican
+Weighted Avg.    0.956    0.047    0.956      0.956    0.956      0.908    0.976     0.965     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 257  10 |   a = democrat
+   9 159 |   b = republican
+

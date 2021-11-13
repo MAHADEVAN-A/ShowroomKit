@@ -1,0 +1,56 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.InfoGainAttributeEval 
+Search:       weka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1
+Relation:     vote
+Instances:    435
+Attributes:   17
+              handicapped-infants
+              water-project-cost-sharing
+              adoption-of-the-budget-resolution
+              physician-fee-freeze
+              el-salvador-aid
+              religious-groups-in-schools
+              anti-satellite-test-ban
+              aid-to-nicaraguan-contras
+              mx-missile
+              immigration
+              synfuels-corporation-cutback
+              education-spending
+              superfund-right-to-sue
+              crime
+              duty-free-exports
+              export-administration-act-south-africa
+              Class
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Attribute ranking.
+
+Attribute Evaluator (supervised, Class (nominal): 17 Class):
+	Information Gain Ranking Filter
+
+Ranked attributes:
+ 0.7078541   4 physician-fee-freeze
+ 0.4185726   3 adoption-of-the-budget-resolution
+ 0.4028397   5 el-salvador-aid
+ 0.34036    12 education-spending
+ 0.3123121  14 crime
+ 0.3095576   8 aid-to-nicaraguan-contras
+ 0.2856444   9 mx-missile
+ 0.2121705  13 superfund-right-to-sue
+ 0.2013666  15 duty-free-exports
+ 0.1902427   7 anti-satellite-test-ban
+ 0.1404643   6 religious-groups-in-schools
+ 0.1211834   1 handicapped-infants
+ 0.1007458  11 synfuels-corporation-cutback
+ 0.0529956  16 export-administration-act-south-africa
+ 0.0049097  10 immigration
+ 0.0000117   2 water-project-cost-sharing
+
+Selected attributes: 4,3,5,12,14,8,9,13,15,7,6,1,11,16,10,2 : 16
+
